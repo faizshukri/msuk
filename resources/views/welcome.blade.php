@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<div id="map"></div>
-		<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.5/mapbox.js'></script>
+		<script type="text/javascript" src="{{ elixir("js/app.js") }}"></script>
 		<script>
 			// Provide your access token
 			L.mapbox.accessToken = 'pk.eyJ1IjoiZmFpenNodWtyaSIsImEiOiJsN0t0RGhZIn0.x72rDz-3Zc0oNijx_KXcRg';

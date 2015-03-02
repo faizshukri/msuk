@@ -3,5 +3,6 @@
 /public/assets
 /public/build
 /public/css/app*
+/public/js/app*
 .env
 .idea
