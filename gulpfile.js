@@ -12,5 +12,12 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.less('app.less');
+    mix.styles([
+        'assets/normalize-css/normalize.css',
+        'assets/bootstrap/dist/css/bootstrap.min.css',
+        'assets/mapbox.js/mapbox.css'
+    ], 'public/css/app.css','public').version('css/app.css');
+
+    mix.copy('public/assets/mapbox.js/images', 'public/build/css/images')
+        .copy('public/css/app.css.map', 'public/build/css/app.css.map');
 });
