@@ -13,6 +13,18 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
 
+    // Before login
+    mix.scripts([
+        'assets/jquery/dist/jquery.js',
+        'assets/bootstrap/dist/js/bootstrap.js'
+    ], 'public/js/guest.js','public');
+
+    mix.styles([
+        'assets/normalize-css/normalize.css',
+        'assets/bootstrap/dist/css/bootstrap.css'
+    ], 'public/css/guest.css','public');
+
+    // After login
     mix.scripts([
         'assets/jquery/dist/jquery.js',
         'assets/bootstrap/dist/js/bootstrap.js',
@@ -28,8 +40,10 @@ elixir(function(mix) {
         'assets/leaflet.markercluster/dist/MarkerCluster.Default.css'
     ], 'public/css/app.css','public');
 
-    mix.version(['css/app.css', 'js/app.js']);
+    mix.version(['css/guest.css', 'js/guest.js', 'css/app.css', 'js/app.js']);
 
-    mix.copy('public/assets/mapbox.js/images', 'public/build/css/images')
+    mix.copy('public/css/guest.css.map', 'public/build/css/guest.css.map')
+        .copy('public/assets/mapbox.js/images', 'public/build/css/images')
         .copy('public/css/app.css.map', 'public/build/css/app.css.map');
+
 });
