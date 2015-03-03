@@ -2,6 +2,6 @@
 /node_modules
 /public/assets
 /public/build
-/public/[css|js]*/[guest|app]*
+/public/[css|js]*
 .env
 .idea
